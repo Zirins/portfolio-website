@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <nav className="flex items-center justify-between p-6 bg-gray-800 text-white shadow-md">
-            {/* Updated Name */}
-            <div className="text-4xl font-extrabold tracking-wide">Benson Lin</div>
-
-            <ul className="flex space-x-6 text-lg font-medium">
-                <li><Link className="hover:text-blue-400" to="/">Home</Link></li>
-                <li><Link className="hover:text-blue-400" to="/about">About</Link></li>
-                <li><Link className="hover:text-blue-400" to="/projects">Projects</Link></li>
-                <li><Link className="hover:text-blue-400" to="/contact">Contact</Link></li>
-            </ul>
+        <nav className="bg-primary text-neutral shadow-md p-4">
+            <div className="flex items-center justify-between max-w-6xl mx-auto">
+                <div className="text-3xl font-bold tracking-wide text-secondary">
+                    Benson Lin
+                </div>
+                <ul className="flex space-x-8 text-lg ">
+                    <li><a className="hover:text-secondary border-b-2 border-secondary" href="/">Home</a></li>
+                    <li><a className="hover:text-secondary border-b-2 border-secondary" href="/about">About</a></li>
+                    <li><a className="hover:text-secondary border-b-2 border-secondary" href="/projects">Projects</a></li>
+                    <li><a className="hover:text-secondary border-b-2 border-secondary" href="/contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     );
 };
