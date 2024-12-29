@@ -1,15 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Adjust if needed
+    "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html",
   ],
   theme: {
     extend: {
       colors: {
-        primary: "#111827",   // Black
-        secondary: "#FBBF24", // Gold
-        neutral: "#FFFFFF",   // White
+        primary: "#0D0D0D",   // Charcoal Black (Background)
+        accent: "#DC143C",   // Deep Crimson (Highlight/Links)
+        secondary: "#FFD700", // Gold (Secondary Accents)
+        textPrimary: "#EAEAEA", // Light Gray (Main Text Color)
       },
     },
   },
