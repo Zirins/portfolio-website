@@ -1,18 +1,22 @@
 import React from 'react';
-// import Navbar from './components/Navbar';
-import About from './components/About'; // Import About component
 import Sidebar from './components/Sidebar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
 
 function App() {
     return (
-        <Router>
-            <div className="App">
-                {/* Sidebar */}
-                <Sidebar />
+        <div className="flex h-screen">
+            {/* Sidebar */}
+            <Sidebar />
 
+            {/* Main Content */}
+            <div className="flex-grow overflow-y-auto">
+                <About />
+                <Experience />
+                <Projects />
             </div>
-        </Router>
+        </div>
     );
 }
 
