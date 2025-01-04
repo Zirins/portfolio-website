@@ -5,21 +5,23 @@ import instagramIcon from "../assets/icons/instagram.svg";
 
 const About = () => {
     return (
-        <section id="about" className="h-screen w-screen bg-primary flex flex-col npm justify-center items-center mt-16 p-8">
+        <section id="about" className="h-screen w-screen bg-primary flex flex-col npm justify-center items-center p-8">
             {/* Description */}
-            <p className="text-lg text-5xl text-textPrimary max-w-2xl text-center leading-relaxed text-secondary">
-                Hi, I’m Benson Lin.
+            <p className="text-lg text-textp max-w-2xl text-center leading-relaxed text-secondary">
+                Hi, I’m a passionate <span className="text-secondary"> Full Stack Developer </span>
+                who loves building modern, scalable web applications. I specialize in
+                <span className="text-secondary"> React.js, JavaScript, and Tailwind CSS</span>, and I enjoy turning ideas into reality through code.
             </p>
 
-            {/*/!* Skills *!/*/}
-            {/*<div className="mt-8 flex flex-wrap justify-center gap-4">*/}
-            {/*    <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">React</span>*/}
-            {/*    <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">JavaScript</span>*/}
-            {/*    <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">Tailwind CSS</span>*/}
-            {/*    <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">Node.js</span>*/}
-            {/*    <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">Git</span>*/}
-            {/*    <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">APIs</span>*/}
-            {/*</div>*/}
+            {/* Skills */}
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">React</span>
+                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">JavaScript</span>
+                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">Tailwind CSS</span>
+                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">Node.js</span>
+                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">Git</span>
+                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">APIs</span>
+            </div>
 
             {/* Social Icons */}
             <div className="flex space-x-4 mt-16">
@@ -47,7 +49,7 @@ const About = () => {
             </div>
 
         </section>
-        
+
     );
 };
 

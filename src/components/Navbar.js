@@ -1,65 +1,26 @@
 import React from 'react';
-import { Link } from 'react-scroll'; // Import Link from react-scroll
+import githubIcon from '../assets/icons/github.svg';
+import linkedinIcon from '../assets/icons/linkedin.svg';
+import instagramIcon from '../assets/icons/instagram.svg';
 
-const NavBar = () => {
+const Navbar = () => {
     return (
-        <nav className="bg-primary text-neutral shadow-md p-4 fixed w-full z-10">
-            <div className="flex items-center justify-between max-w-6xl mx-auto">
+        <nav className="fixed top-0 w-full bg-primary text-textPrimary p-4 shadow-md z-50">
+            <div className="max-w-7xl mx-auto flex justify-between items-center">
                 {/* Logo */}
-                <div className="font-serif text-3xl font-extrabold tracking-wide text-secondary">
-                    Benson Lin
-                </div>
+                <h1 className="text-2xl font-bold">Benson Lin</h1>
 
-                {/* Navbar Links */}
-                <ul className="flex space-x-8 text-lg">
-                    <li>
-                        <Link
-                            to="home"
-                            smooth={true}
-                            duration={500}
-                            offset={-70}
-                            className="hover:text-secondary transition-colors duration-300 cursor-pointer"
-                        >
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="about"
-                            smooth={true}
-                            duration={500}
-                            offset={-70}
-                            className="hover:text-secondary transition-colors duration-300 cursor-pointer"
-                        >
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="projects"
-                            smooth={true}
-                            duration={500}
-                            offset={-70}
-                            className="hover:text-secondary transition-colors duration-300 cursor-pointer"
-                        >
-                            Projects
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="contact"
-                            smooth={true}
-                            duration={500}
-                            offset={-70}
-                            className="hover:text-secondary transition-colors duration-300 cursor-pointer"
-                        >
-                            Contact
-                        </Link>
-                    </li>
+                {/* Navigation Links */}
+                <ul className="flex space-x-6 text-lg">
+                    <li className="hover:text-secondary cursor-pointer" onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>ABOUT</li>
+                    <li className="hover:text-secondary cursor-pointer" onClick={() => document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })}>EXPERIENCE</li>
+                    <li className="hover:text-secondary cursor-pointer" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>PROJECTS</li>
                 </ul>
+
+
             </div>
         </nav>
     );
 };
 
-export default NavBar;
+export default Navbar;
