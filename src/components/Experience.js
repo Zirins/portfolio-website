@@ -1,56 +1,49 @@
 import React from 'react';
-import githubIcon from "../assets/icons/github.svg";
-import linkedinIcon from "../assets/icons/linkedin.svg";
-import instagramIcon from "../assets/icons/instagram.svg";
 
-const About = () => {
+const Experience = () => {
+    const experiences = [
+        {
+            date: 'MAR 2024 — MAY 2024',
+            title: 'Software Engineer Collaboration',
+            company: 'Brigham & Women\'s Hospital',
+            link: 'https://www.brighamandwomens.org/',
+            description: 'Worked on a 9-person team applying Agile methodologies to create a hospital web application prototype. Developed features using React.js, Typescript, Material UI, Express, Prisma ORM, and PostgreSQL. Built algorithms for hospital navigation (A*, Dijkstra, BFS, DFS) and implemented modules for pathfinding and service requests.',
+            tags: ['React.js', 'TypeScript', 'Material UI', 'Express', 'Prisma ORM', 'PostgreSQL']
+        },
+    ];
+
     return (
-        <section id="about" className="h-screen w-screen bg-primary flex flex-col npm justify-center items-center p-8">
-            {/* Description */}
-            <p className="text-lg text-textp max-w-2xl text-center leading-relaxed text-secondary">
-                Hi, I’m a passionate <span className="text-secondary"> Full Stack Developer </span>
-                who loves building modern, scalable web applications. I specialize in
-                <span className="text-secondary"> React.js, JavaScript, and Tailwind CSS</span>, and I enjoy turning ideas into reality through code.
-            </p>
-
-            {/* Skills */}
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">React</span>
-                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">JavaScript</span>
-                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">Tailwind CSS</span>
-                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">Node.js</span>
-                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">Git</span>
-                <span className="px-4 py-2 bg-secondary text-neutral rounded-lg shadow">APIs</span>
+        <section id="experience" className="h-auto min-h-[300px] bg-gray-100 text-gray-800 p-8 md:p-16 lg:p-20">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">Experience</h2>
+            <div className="space-y-8">
+                {experiences.map((exp, index) => (
+                    <a
+                        key={index}
+                        href={exp.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block bg-white rounded-lg shadow-lg p-6 transition duration-300 hover:shadow-xl hover:scale-105 hover:bg-gray-50"
+                    >
+                        <p className="text-sm text-gray-600 mb-2">{exp.date}</p>
+                        <h3 className="text-xl font-semibold text-gray-800 hover:text-primary">
+                            {exp.title} · {exp.company}
+                        </h3>
+                        <p className="text-sm text-gray-700 mt-2 leading-relaxed">{exp.description}</p>
+                        <div className="flex flex-wrap mt-4 gap-2">
+                            {exp.tags.map((tag, idx) => (
+                                <span
+                                    key={idx}
+                                    className="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-lg shadow"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </a>
+                ))}
             </div>
-
-            {/* Social Icons */}
-            <div className="flex space-x-4 mt-16">
-                <a href="https://github.com/Zirins" target="_blank" rel="noopener noreferrer">
-                    <img
-                        src={githubIcon}
-                        alt="GitHub"
-                        className="w-8 h-8 hover:scale-110 transition duration-300 hover:shadow-accent filter invert"
-                    />
-                </a>
-                <a href="https://www.linkedin.com/in/bensonlinbl/" target="_blank" rel="noopener noreferrer">
-                    <img
-                        src={linkedinIcon}
-                        alt="Linkedin"
-                        className="w-8 h-8 hover:scale-110 transition duration-300 hover:shadow-accent filter invert"
-                    />
-                </a>
-                <a href="https://instagram.com/bensonlinbl" target="_blank" rel="noopener noreferrer">
-                    <img
-                        src={instagramIcon}
-                        alt="GitHub"
-                        className="w-8 h-8 hover:scale-110 transition duration-300 hover:shadow-accent filter invert"
-                    />
-                </a>
-            </div>
-
         </section>
-
     );
 };
 
-export default About;
+export default Experience;

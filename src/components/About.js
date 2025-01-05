@@ -7,7 +7,7 @@ const About = () => {
     return (
         <section id="about" className="h-screen w-screen bg-primary flex flex-col npm justify-center items-center mt-16 p-8">
             {/* Description */}
-            <p className="text-lg text-5xl text-textPrimary max-w-2xl text-center leading-relaxed text-secondary">
+            <p className="text-6xl text-textPrimary max-w-2xl text-center leading-relaxed text-secondary">
                 Hi, I’m Benson Lin.
             </p>
 
